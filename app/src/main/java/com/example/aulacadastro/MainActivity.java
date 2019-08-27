@@ -55,8 +55,12 @@ public class MainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this,
-                            "Cadastrado com Sucesso",
+                            edtNome.getText().toString().concat(" ")
+                                    .concat(edtSobreNome.getText().toString())
+                                    .concat(" ").concat("Cadastrado com Sucesso"),
                             Toast.LENGTH_SHORT).show();
+                    edtNome.setText("Nome");
+                    edtSobreNome.setText("Sobrenome");
                 }
             }
         });
